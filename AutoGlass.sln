@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoGlass.Domain", "AutoGlass.Domain\AutoGlass.Domain.csproj", "{AABBFCB6-3A44-48C1-A498-68C8AC067A9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoGlass.Infra", "AutoGlass.Infra\AutoGlass.Infra.csproj", "{8E5268FD-8415-42DF-8C11-EF5117AE9C63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoGlass.Api", "AutoGlass.Api\AutoGlass.Api.csproj", "{74D73E89-7A12-4A99-917B-8ECCB7221A96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AABBFCB6-3A44-48C1-A498-68C8AC067A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABBFCB6-3A44-48C1-A498-68C8AC067A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABBFCB6-3A44-48C1-A498-68C8AC067A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABBFCB6-3A44-48C1-A498-68C8AC067A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E5268FD-8415-42DF-8C11-EF5117AE9C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E5268FD-8415-42DF-8C11-EF5117AE9C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E5268FD-8415-42DF-8C11-EF5117AE9C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E5268FD-8415-42DF-8C11-EF5117AE9C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74D73E89-7A12-4A99-917B-8ECCB7221A96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74D73E89-7A12-4A99-917B-8ECCB7221A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74D73E89-7A12-4A99-917B-8ECCB7221A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74D73E89-7A12-4A99-917B-8ECCB7221A96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C5EDF36-740D-4F6E-8634-361D0DBBF5A2}
+	EndGlobalSection
+EndGlobal

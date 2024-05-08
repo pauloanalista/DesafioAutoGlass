@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AutoGlass.Domain.Entities.Fornecedor">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQABAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Fornecedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutoGlass.Domain.Entities.Produto">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAQABAAAAAAAAAQAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Entities\Produto.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Fornecedor" />
+      <Property Name="Situacao" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="AutoGlass.Domain.Enums.Produto.EnumSituacao">
+    <Position X="12.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\Produto\EnumSituacao.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

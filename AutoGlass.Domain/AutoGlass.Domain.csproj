@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Commands\Grupo\**" />
+    <Compile Remove="Commands\Linha\**" />
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="Commands\Grupo\**" />
+    <EmbeddedResource Remove="Commands\Linha\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="Commands\Grupo\**" />
+    <None Remove="Commands\Linha\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Enums\Estrategia\EnumStatus.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.IQueryable.Extensions" Version="6.0.2" />
+    <PackageReference Include="Ilovecode.EFCore.RepositoryBase" Version="1.0.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="prmToolkit.EnumExtension" Version="2.0.3" />
+    <PackageReference Include="prmToolkit.NotificationPattern" Version="1.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Fornecedor\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  
+</Project>
