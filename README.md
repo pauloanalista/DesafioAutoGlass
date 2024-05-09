@@ -4,7 +4,6 @@
 
 # Paulo Rogério Martins Marques
 
-[![Blog](https://img.shields.io/badge/Blog-blue.svg?style=for-the-badge&logo=wordpress)](https://olha.la/ilovecode)
 [![Youtube](https://img.shields.io/badge/Youtube-red.svg?style=for-the-badge&logo=youtube)](https://www.youtube.com/channel/UChoveUE94dFSAPfPiJhFsew)
 [![Linkedin](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=Linkedin)](https://www.linkedin.com/in/paulorogerio/)
 
@@ -70,6 +69,9 @@ Apesar do desfio ser simples, tentei criar uma arquitetura mais robusta que pode
 Como usei vários Design Patners, ficaria muito extenso escrever uma documentação, então gravei um vídeo mostrando toda arquitetura.
 
 https://youtu.be/d5O57v_ZtFs
+
+![Como-posicionar-um-vídeo-do-Youtube-no-Google-rapidamente-Incluye-vídeo](https://youtu.be/d5O57v_ZtFs)
+
 
 ### Agradecimento
 Gostaria de agradecer pelo desafio passado e peço que avaliem o projeto com calma e me mandem feedbacks, mesmo que negativo.
