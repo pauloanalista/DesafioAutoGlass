@@ -70,7 +70,10 @@ Como usei vários Design Patners, ficaria muito extenso escrever uma documentaç
 
 https://youtu.be/d5O57v_ZtFs
 
-![Como-posicionar-um-vídeo-do-Youtube-no-Google-rapidamente-Incluye-vídeo](https://youtu.be/d5O57v_ZtFs)
+
+
+[![Clique para assistir](https://github.com/pauloanalista/DesafioAutoGlass/assets/6010161/46be0a95-ad26-4e40-b6cf-672301bc587b)](https://youtu.be/d5O57v_ZtFs)
+
 
 
 ### Agradecimento
