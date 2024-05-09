@@ -1,8 +1,10 @@
 ﻿using AutoGlass.Domain.Interfaces.Repositories;
 using AutoGlass.Domain.Resources;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -28,7 +30,8 @@ namespace AutoGlass.Domain.Commands.Produto.ObterProdutoPorCodigo
                 return new Response(this);
             }
 
-            var produto = _repositoryProduto.GetBy(x=>x.Codigo==request.Codigo);
+            var produto = _repositoryProduto.GetAllBy(x => x.Codigo==request.Codigo).Include(x=>x.Fornecedor).FirstOrDefault();
+            //var produto = _repositoryProduto.GetBy(x=>x.Codigo==request.Codigo);
 
             if (produto == null)
             {

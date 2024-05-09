@@ -112,7 +112,7 @@ namespace AutoGlass.Api.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpDelete]
         [Route("api/Produtos/{id:Guid}")]
         public async Task<IActionResult> ExcluirProduto(Guid id)

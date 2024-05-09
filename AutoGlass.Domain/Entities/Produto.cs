@@ -9,14 +9,14 @@ namespace AutoGlass.Domain.Entities
 {
     public class Produto : EntityBase
     {
-        public Produto(Fornecedor fornecedor, string codigo, string descricao, EnumSituacao situacao, DateTime dataFabricacao, DateTime dataValidade)
+        public Produto(Fornecedor fornecedor, string codigo, string descricao, DateTime dataFabricacao, DateTime dataValidade)
         {
             Codigo = codigo;
             Descricao = descricao;
-            Situacao = situacao;
             DataFabricacao = dataFabricacao;
             DataValidade = dataValidade;
             Fornecedor = fornecedor;
+            Situacao = EnumSituacao.Ativo;
 
             new AddNotifications<Produto>(this)
                 .IfRequired(x => x.Codigo, 1, 50)
@@ -47,11 +47,10 @@ namespace AutoGlass.Domain.Entities
         public DateTime DataValidade { get; private set; }
         public Fornecedor Fornecedor { get; set; }
 
-        public void AlterarProduto(Fornecedor fornecedor, string codigo, string descricao, EnumSituacao situacao, DateTime dataFabricacao, DateTime dataValidade)
+        public void AlterarProduto(Fornecedor fornecedor, string codigo, string descricao,DateTime dataFabricacao, DateTime dataValidade)
         {
             Codigo = codigo;
             Descricao = descricao;
-            Situacao = situacao;
             DataFabricacao = dataFabricacao;
             DataValidade = dataValidade;
             Fornecedor = fornecedor;

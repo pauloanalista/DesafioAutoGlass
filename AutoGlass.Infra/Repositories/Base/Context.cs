@@ -4,7 +4,9 @@ using prmToolkit.NotificationPattern;
 using AutoGlass.Domain.Entities;
 using AutoGlass.Infra.Repositories.Map;
 using System;
-
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Options;
 
 namespace AutoGlass.Infra.Repositories.Base
 {
@@ -14,12 +16,12 @@ namespace AutoGlass.Infra.Repositories.Base
         public DbSet<Fornecedor> Fornecedor { get; set; }
         public DbSet<Produto> Produto { get; set; }
 
-        IConfiguration _configuration;
+        //IConfiguration _configuration;
 
-        public Context(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
+        //public Context(IConfiguration configuration)
+        //{
+        //    _configuration = configuration;
+        //}
 
         
 
@@ -27,7 +29,7 @@ namespace AutoGlass.Infra.Repositories.Base
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            
 
             if (!optionsBuilder.IsConfigured)
             {
@@ -66,4 +68,19 @@ namespace AutoGlass.Infra.Repositories.Base
 
 
     }
+
+    //public class MyAppDbContextFactory : IDesignTimeDbContextFactory<Context>
+    //{
+    //    public Context CreateDbContext(string[] args)
+    //    {
+    //        var optionsBuilder = new DbContextOptionsBuilder<Context>();
+
+    //        // Configure a string de conexão
+    //        string connection = "Server=127.0.0.1;Database=autoglass;Uid=root;Pwd=root; Connection Timeout=120";
+    //        optionsBuilder.UseMySql(connection, ServerVersion.AutoDetect(connection));
+
+
+    //        return new Context(optionsBuilder.Options);
+    //    }
+    //}
 }

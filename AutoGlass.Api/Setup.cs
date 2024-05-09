@@ -21,6 +21,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
+
 namespace AutoGlass.Api
 {
     public static class Setup
@@ -48,7 +49,7 @@ namespace AutoGlass.Api
         }
         public static void ConfigureRepositories(this IServiceCollection services)
         {
-            //services.AddDbContext<Context>();
+            services.AddDbContext<Context, Context>();
             services.AddScoped<Context, Context>();
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();

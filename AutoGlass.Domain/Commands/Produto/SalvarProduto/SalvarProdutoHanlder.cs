@@ -47,11 +47,11 @@ namespace AutoGlass.Domain.Commands.Produto.SalvarProduto
             if (request.IdProduto.HasValue)
             {
                 produto = _repositoryProduto.GetBy(x => x.Id == request.IdProduto);
-                produto.AlterarProduto(fornecedor, request.Codigo, request.Descricao, request.Situacao, request.DataFabricacao, request.DataValidade);
+                produto.AlterarProduto(fornecedor, request.Codigo, request.Descricao, request.DataFabricacao, request.DataValidade);
             }
             else
             {
-                produto = new Entities.Produto(fornecedor, request.Codigo, request.Descricao, request.Situacao, request.DataFabricacao, request.DataValidade);
+                produto = new Entities.Produto(fornecedor, request.Codigo, request.Descricao, request.DataFabricacao, request.DataValidade);
             }
 
             AddNotifications(produto);
