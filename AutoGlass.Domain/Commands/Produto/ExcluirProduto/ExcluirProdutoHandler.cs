@@ -43,7 +43,12 @@ namespace AutoGlass.Domain.Commands.Produto.ExcluirProduto
             }
 
             produto.InativarProduto();
-            
+
+            if (IsInvalid())
+            {
+                return new Response(this);
+            }
+
             _repositoryProduto.Update(produto);
 
             //Cria objeto de resposta

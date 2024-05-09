@@ -19,7 +19,7 @@ namespace AutoGlass.Domain.Entities
             Situacao = EnumSituacao.Ativo;
 
             new AddNotifications<Produto>(this)
-                .IfRequired(x => x.Codigo, 1, 50)
+                .IfRequired(x => x.Codigo, 1, 50, "O codigo deve ter entre 2 a 50 caracteres")
                 .IfRequired(x => x.Descricao, 1, 1000)
                 .IfNull(x => x.DataFabricacao, MSG.X0_INVALIDA.ToFormat("Data Fabricação"))
                 .IfNull(x => x.DataValidade, MSG.X0_INVALIDA.ToFormat("Data Validade"))
@@ -34,20 +34,7 @@ namespace AutoGlass.Domain.Entities
                 AddNotification("DataFabricacao", "Data de fabricação não pode ser maior que a data da validade");
             }
         }
-
-        protected Produto()
-        {
-
-        }
-        public string Codigo { get; set; }
-
-        public string Descricao { get; private set; }
-        public EnumSituacao Situacao { get; private set; }
-        public DateTime DataFabricacao { get; private set; }
-        public DateTime DataValidade { get; private set; }
-        public Fornecedor Fornecedor { get; set; }
-
-        public void AlterarProduto(Fornecedor fornecedor, string codigo, string descricao,DateTime dataFabricacao, DateTime dataValidade)
+        public void AlterarProduto(Fornecedor fornecedor, string codigo, string descricao, DateTime dataFabricacao, DateTime dataValidade)
         {
             Codigo = codigo;
             Descricao = descricao;
@@ -74,5 +61,18 @@ namespace AutoGlass.Domain.Entities
         {
             Situacao = EnumSituacao.Inativo;
         }
+        protected Produto()
+        {
+
+        }
+        public string Codigo { get; set; }
+
+        public string Descricao { get; private set; }
+        public EnumSituacao Situacao { get; private set; }
+        public DateTime DataFabricacao { get; private set; }
+        public DateTime DataValidade { get; private set; }
+        public Fornecedor Fornecedor { get; set; }
+
+        
     }
 }
