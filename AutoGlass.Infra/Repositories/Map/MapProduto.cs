@@ -17,11 +17,10 @@ namespace AutoGlass.Infra.Repositories.Map
             builder.Property(x => x.Descricao).HasMaxLength(1000).IsRequired();
             builder.Property(x => x.DataFabricacao).IsRequired();
             builder.Property(x => x.DataValidade).IsRequired();
-            builder.Property(x => x.Fornecedor).IsRequired();
             builder.Property(x => x.Situacao).IsRequired();
 
             //Foreikey
-            builder.HasOne(x => x.Fornecedor).WithMany().HasForeignKey("IdForncedor");
+            builder.HasOne(x => x.Fornecedor).WithMany().HasForeignKey("IdFornecedor");
         }
     }
 }

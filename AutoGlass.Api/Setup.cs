@@ -91,7 +91,7 @@ namespace AutoGlass.Api
         {
             services.AddDbContext<Context>(options =>
             {
-                //connection = "Server=162.241.101.197;Database=ilovecod_AutoGlass;Uid=ilovecod_AutoGlass;Pwd=ilovecod_AutoGlass;";
+                connection = "Server=127.0.0.1;Database=autoglass;Uid=root;Pwd=root; Connection Timeout=120";
                 options.UseMySql(connection, ServerVersion.AutoDetect(connection));
             });
 

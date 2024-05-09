@@ -3,6 +3,8 @@ using Microsoft.Extensions.Configuration;
 using prmToolkit.NotificationPattern;
 using AutoGlass.Domain.Entities;
 using AutoGlass.Infra.Repositories.Map;
+using System;
+
 
 namespace AutoGlass.Infra.Repositories.Base
 {
@@ -23,26 +25,30 @@ namespace AutoGlass.Infra.Repositories.Base
 
         public Context(DbContextOptions<Context> options) : base(options) { }
 
-        //public Context(string conexao)
-        //{
-        //    _conexao = conexao;
-        //}
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+
+
             if (!optionsBuilder.IsConfigured)
             {
-                string conexao = _configuration.GetSection("Conexao").Value;
-                //Habilito para gerar o migration
-                //conexao = "Server=162.241.101.197;Database=ilovecod_AutoGlassdev;Uid=ilovecod_AutoGlassdev;Pwd=ilovecod_AutoGlassdev; Connection Timeout=120";
-                conexao = "Server=162.241.101.197;Database=ilovecod_AutoGlass;Uid=ilovecod_AutoGlass;Pwd=ilovecod_AutoGlass; Connection Timeout=120";
+                string connection = "Server=127.0.0.1;Database=autoglass;Uid=root;Pwd=root; Connection Timeout=120";
 
-                //optionsBuilder.UseMySql(_conexao, ServerVersion.AutoDetect(_conexao));
-                optionsBuilder.UseMySql(conexao, ServerVersion.AutoDetect(conexao),
-                    b => b
-                    .CharSetBehavior(Pomelo.EntityFrameworkCore.MySql.Infrastructure.CharSetBehavior.NeverAppend)// Nao usar utf8mb4
-                    );
+
+                optionsBuilder.UseMySql(connection, ServerVersion.AutoDetect(connection));
             }
+
+
+            //if (!optionsBuilder.IsConfigured)
+            //{
+
+            //    //Habilito para gerar o migration
+            //    string conexao = "Server=127.0.0.1;Database=autoglass;Uid=root;Pwd=root; Connection Timeout=120";
+            //    //optionsBuilder.UseMySql(conexao, ServerVersion.AutoDetect(conexao));
+            //    optionsBuilder.UseMySql(conexao, ServerVersion.AutoDetect(conexao),
+            //        b => b
+            //        .CharSetBehavior(Pomelo.EntityFrameworkCore.MySql.Infrastructure.CharSetBehavior.NeverAppend)// Nao usar utf8mb4
+            //        );
+            //}
             base.OnConfiguring(optionsBuilder);
         }
 
