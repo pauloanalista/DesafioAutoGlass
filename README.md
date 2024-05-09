@@ -68,13 +68,11 @@ Organizar desta forma deixa nosso Startup mais clean e objetivo, veja um exemplo
 Apesar do desfio ser simples, tentei criar uma arquitetura mais robusta que pode ser utilizada em um projeto real.
 Como usei vários Design Patners, ficaria muito extenso escrever uma documentação, então gravei um vídeo mostrando toda arquitetura.
 
-https://youtu.be/d5O57v_ZtFs
 
-
-
+#### Clique na imagem para assistir a apresentação
 [![Clique para assistir](https://github.com/pauloanalista/DesafioAutoGlass/assets/6010161/46be0a95-ad26-4e40-b6cf-672301bc587b)](https://youtu.be/d5O57v_ZtFs)
 
-
+https://youtu.be/d5O57v_ZtFs
 
 ### Agradecimento
 Gostaria de agradecer pelo desafio passado e peço que avaliem o projeto com calma e me mandem feedbacks, mesmo que negativo.
