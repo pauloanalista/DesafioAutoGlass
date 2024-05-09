@@ -26,10 +26,14 @@ Pretendo entregar o teste unitário amanhã, mas ele não fará parte do vídeo.
 ## Organização do projeto
 
 ### Estrutura da Solution
-Criei 4 projetos
+#### Criei 4 projetos
+
 API -> Responsável por externalizar os recursos
+
 Dominio -> Responsável por toda parte de negócio e contratos
-Infra -> Responsável por fazer acesso a repositórios, arquivos e acessar arquivos externos
+
+Infra -> Responsável por fazer acesso a repositórios, arquivos e acessar serviços externos
+
 Test -> Responsável por testar todo o projeto
 
 ![image](https://github.com/pauloanalista/DesafioAutoGlass/assets/6010161/3053d65f-8b27-4fc8-b342-41eade33941d)
